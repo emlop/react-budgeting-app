@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import expenses from '../fixtures/expenses';
-import { EditExpensePage } from '../../components/EditBudgetPage';
+import { EditBudgetPage } from '../../components/EditBudgetPage';
 
 let editExpense, removeExpense, history, wrapper;
 
@@ -19,7 +19,7 @@ beforeEach(() => {
   );
 });
 
-test('should render EditExpensePage', () => {
+test('should render EditBudgetPage', () => {
   expect(wrapper).toMatchSnapshot();
 });
 

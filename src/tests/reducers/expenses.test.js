@@ -27,11 +27,11 @@ test('should not remove expenses if id not found', () => {
 
 test('should add an expense', () => {
   const expense = {
-    id: '9',
-    description: 'TV',
+    id: '109',
+    description: 'Laptop',
     note: '',
-    createdAt: 10000,
-    amount: 20000
+    createdAt: 20000,
+    amount: 29500
   };
   const action = {
     type: 'ADD_EXPENSE',
@@ -42,7 +42,7 @@ test('should add an expense', () => {
 });
 
 test('should edit an expense', () => {
-  const amount = 102000;
+  const amount = 122000;
   const action = {
     type: 'EDIT_EXPENSE',
     id: expenses[1].id,
