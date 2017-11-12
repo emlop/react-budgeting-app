@@ -32,6 +32,15 @@ export const removeExpense = ({ id } = {}) => ({
   id
 });
 
+// Defining asynchronous action to make changes to the redux store related to remove expense
+export const startRemoveExpense = ({ id } = {}) => {
+  return (dispatch) => {
+    return database.ref(`expenses/${id}`).remove().then(() => {
+      dispatch(removeExpense({ id }));
+    });
+  };
+};
+
 // Edit expense
 export const editExpense = (id, updates) => ({
   type: 'EDIT_EXPENSE',
