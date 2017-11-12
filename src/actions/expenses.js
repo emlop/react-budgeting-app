@@ -54,6 +54,15 @@ export const setExpenses = (expenses) => ({
   expenses
 });
 
+// Asynchronous action responsible for editing fetched data from firebase
+export const startEditExpense = (id, updates) => {
+  return (dispatch) => {
+    return database.ref(`expenses/${id}`).update(updates).then(() => {
+      dispatch(editExpense(id, updates));
+    });
+  };
+};
+
 // Asynchronous action responsible for fetching data from firebase
 export const startSetExpenses = () => {
   return (dispatch) => {
