@@ -1,0 +1,19 @@
+.button {
+  background: $green;
+  color: white;
+  border: none;
+  font-weight: 200;
+  padding: $s-size;
+  font-size: $font-size-large;
+  display: inline-block;
+  text-decoration: none;
+  line-height: 1;
+}
+
+.button--link {
+  background: none;
+}
+
+.button-secondary {
+  background: #CC3D3D;
+}
